@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aula 06 - Formulários</title>
+</head> 
+<body>
+    <h1>Escola Virtual</h1>
+    <h2>Formulário de Pré-Matrícula</h2>
+    <div class="div-hr"></div>
+    
+    <div class="formulario">
+        <form class="formu">
+            <section class="session1">
+                <p class="DP">&nbsp;Dados Pessoais:</p>
+                <div class="dados1">
+                    <label class="Campos1">Nome do Aluno:&nbsp;<input type="text" class="Aluno" required></label>
+                    <div class="camp2">
+                        <label class="Campos2">
+                            <!-- Javascript utilizado para limitar o nº de caracteres no input de tipo number -->
+                            Nascimento (dd/mm/aaaa):&nbsp;<input type="number" class="dm" required
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "2"
+                            ><span style="font-weight: bold;">/</span>
+                            <input type="number" class="dm" required
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "2"
+                            ><span style="font-weight: bold;">/</span>
+                            <input type="number" class="aaaa" required
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "4"
+                            >
+                        </label>
+                    </div>
+                    </label>
+                    
+                    <label>Nome da Mãe:&nbsp;<input type="text" required></label>
+                    <label>Nome do Pai:&nbsp;<input type="text" required></label>
+
+                    <div class="Telefone">
+                        <label>
+                            Telefone: DDD(<input name="DDD" class="DDD" required
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                type = "number"
+                                maxlength = "3"
+                                >)    
+                            Tel:<input type="number" class="Tel" required
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            type = "number"
+                            maxlength = "9"
+                            >
+                            Ramal:<input type="number" class="DDD">
+                        </label>
+                    </div> 
+                    
+                    <label class="Campos6">E-Mail:&nbsp;<input type="email" required></label>
+                </div>
+            </section>
+
+            <section class="session2">
+                <p class="IM">&nbsp;Informações de Matrícula:</p>
+                <div class="dados2">
+                    <div class="seq">
+                        <label class="princ">Série:</label>
+                        <select>
+                        <option class="pre-escolar">pré-escolar</option>
+                        <option value="valor2">1º série 1º grau</option>
+                        <option value="valor3">2º série 1º grau</option>
+                        <option value="valor4">3º série 1º grau</option>
+                        <option value="valor5">4º série 1º grau</option>
+                        <option value="valor6">5º série 1º grau</option>
+                        <option value="valor7">6º série 1º grau</option>
+                        <option value="valor8">7º série 1º grau</option>
+                        <option value="valor9">8º série 1º grau</option>
+                        <option value="valor10">1º série 2º grau</option>
+                        <option value="valor11">2º série 2º grau</option>
+                        <option value="valor12">3º série 2º grau</option>
+                        </select>
+                    </div>
+                    
+                    
+                    <div class="seq1">
+                        <label class="princ">Turno:</label>
+                        <label><input type="radio" name="turno" required>Manhã</label>
+                        <label><input type="radio" name="turno" required>Tarde</label>
+                    </div> 
+                    <div class="seq2">  
+                        <label class="princ">Atividades Extracurriculares:</label>
+                        <label><input type="checkbox">Informática</label>
+                        <label><input type="checkbox">Música</label>
+                        <label><input type="checkbox">Balet</label>
+                        <label><input type="checkbox">Pintura</label>
+                        <label><input type="checkbox">Judô</label>
+                        <label><input type="checkbox">Futebol</label> 
+                    </div> 
+                </div>
+                <div class="btn">
+                    <button class="botao" type="submit">Envia Formulário</button>
+                    <button class="botao" type="reset">Limpa Campos</button>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
